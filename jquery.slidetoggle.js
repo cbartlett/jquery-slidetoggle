@@ -25,6 +25,7 @@
       var $toggle = $toggleTemplate.clone();
       $(this).hide()
         .attr('checked', function(i, attr) {
+          attr = attr || false
           $toggle.toggleClass('checked', attr).find('span').text(function() {
             return toggleText(attr);
           });
