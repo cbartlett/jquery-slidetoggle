@@ -12,7 +12,7 @@ height: 24px;
 -ms-user-select: none;
 user-select: none;
 }
-div.slidetoggle > span {
+div.slidetoggle .slidetoggle-text {
 color: #fff;
 cursor: default;
 float: right;
@@ -22,11 +22,11 @@ line-height: 24px;
 text-transform: uppercase;
 margin: 0 10px 0 0;
 }
-div.slidetoggle.checked > span {
+div.slidetoggle.checked .slidetoggle-text {
 float: left;
 margin: 0 0 0 5px;
 }
-div.slidetoggle > div {
+div.slidetoggle .slidetoggle-slider {
 background-color: lightgray;
 border-radius: 2px;
 position: absolute;
@@ -45,7 +45,7 @@ transition: transform .2s;
 -webkit-transform: translate(1px, 0);
 -webkit-transition: -webkit-transform .2s;
 }
-div.slidetoggle.checked > div {
+div.slidetoggle.checked .slidetoggle-slider {
 left: 37px\9;
 transform: translate(37px, 0);
 -moz-transform: translate(37px, 0);

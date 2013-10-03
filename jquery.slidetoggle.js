@@ -5,7 +5,12 @@
     var className = options.className || 'slidetoggle'
       , checkedText = options.checkedText || 'yes'
       , uncheckedText = options.uncheckedText || 'no'
-      , $toggleTemplate = $('<div class="' + className + '"><span></span><div></div></div>');
+      , $toggleTemplate = $([
+        '<div class="' + className + '">',
+        '<span class="' + className + '-text'  + '"></span>',
+        '<div class="' + className + '-slider' + '"></div>',
+        '</div>'
+      ].join(''));
 
     function toggleText(checked) {
       return checked ? checkedText : uncheckedText
