@@ -7,7 +7,7 @@
       , uncheckedText = options.uncheckedText || 'no'
       , $toggleTemplate = $([
         '<div class="' + className + '">',
-        '<span class="' + className + '-text'  + '"></span>',
+        '<div class="' + className + '-text'  + '"></div>',
         '<div class="' + className + '-slider' + '"></div>',
         '</div>'
       ].join(''));
@@ -19,7 +19,7 @@
     $(document).on('click', 'div.' + className, function() {
       var $toggle = $(this);
       $toggle.prev().attr('checked', function(i, attr) {
-        $toggle.toggleClass('checked', attr).find('span').text(toggleText(!attr));
+        $toggle.toggleClass('checked', attr).find(':first-child').text(toggleText(!attr));
         return !attr;
       });
     });
@@ -29,7 +29,7 @@
       $(this).hide()
         .attr('checked', function(i, attr) {
           attr = attr || false;
-          $toggle.toggleClass('checked', attr).find('span').text(toggleText(attr));
+          $toggle.toggleClass('checked', attr).find(':first-child').text(toggleText(attr));
           return attr;
         })
         .after($toggle);
