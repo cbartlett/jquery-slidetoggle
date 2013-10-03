@@ -14,9 +14,7 @@
     $(document).on('click', 'div.' + className, function() {
       var $toggle = $(this);
       $toggle.prev().attr('checked', function(i, attr) {
-        $toggle.toggleClass('checked', attr).find('span').text(function() {
-          return toggleText(!attr);
-        });
+        $toggle.toggleClass('checked', attr).find('span').text(toggleText(!attr));
         return !attr;
       });
     });
@@ -25,10 +23,8 @@
       var $toggle = $toggleTemplate.clone();
       $(this).hide()
         .attr('checked', function(i, attr) {
-          attr = attr || false
-          $toggle.toggleClass('checked', attr).find('span').text(function() {
-            return toggleText(attr);
-          });
+          attr = attr || false;
+          $toggle.toggleClass('checked', attr).find('span').text(toggleText(attr));
           return attr;
         })
         .after($toggle);
