@@ -15,7 +15,7 @@ user-select: none;
 div.slidetoggle.checked {
 background-color: green;
 }
-div.slidetoggle .slidetoggle-text {
+div.slidetoggle div:first-child {
 color: #fff;
 cursor: default;
 float: right;
@@ -25,11 +25,11 @@ line-height: 24px;
 text-transform: uppercase;
 margin: 0 10px 0 0;
 }
-div.slidetoggle.checked .slidetoggle-text {
+div.slidetoggle.checked div:first-child {
 float: left;
 margin: 0 0 0 5px;
 }
-div.slidetoggle .slidetoggle-slider {
+div.slidetoggle div + div {
 background-color: white;
 border-radius: 2px;
 position: absolute;
@@ -48,7 +48,7 @@ transition: transform .1s;
 -webkit-transform: translate(2px, 0);
 -webkit-transition: -webkit-transform .1s;
 }
-div.slidetoggle.checked .slidetoggle-slider {
+div.slidetoggle.checked div + div {
 left: 38px\9;
 transform: translate(38px, 0);
 -moz-transform: translate(38px, 0);
