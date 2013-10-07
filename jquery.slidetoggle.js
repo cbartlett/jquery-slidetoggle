@@ -6,7 +6,7 @@
         stateText: ['no', 'yes']
       }, options || {})
       , eventName = settings.className + ':click'
-      , $toggleTemplate = $('<div class="' +
+      , $template = $('<div class="' +
           settings.className + '"><div></div><div></div></div>');
 
     if(!$.fn.slidetoggle.init) {
@@ -33,7 +33,7 @@
 
     return this.each(function() {
       var $checkbox = $(this)
-        , $toggle = $toggleTemplate.clone();
+        , $toggle = $template.clone();
 
       $checkbox.hide()
         .attr('checked', function(i, attr) {
