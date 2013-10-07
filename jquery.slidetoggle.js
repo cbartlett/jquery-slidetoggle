@@ -2,7 +2,7 @@
   $.fn.slidetoggle = function(options) {
 
     var settings = $.extend({
-        className:     'slidetoggle',
+        className: 'slidetoggle',
         stateText: ['no', 'yes']
       }, options || {})
       , eventName = settings.className + ':click'
