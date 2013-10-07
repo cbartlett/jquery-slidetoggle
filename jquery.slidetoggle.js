@@ -3,11 +3,9 @@
 
     var settings = $.extend({
         className:     'slidetoggle',
-        checkedText:   'yes',
-        uncheckedText: 'no'
+        stateText: ['no', 'yes']
       }, options || {})
       , eventName = settings.className + ':click'
-      , textToggle = [settings.uncheckedText, settings.checkedText]
       , $toggleTemplate = $('<div class="' +
           settings.className + '"><div></div><div></div></div>');
 
@@ -17,7 +15,7 @@
         var $toggle = $(e.target);
         $toggle.prev().attr('checked', function(i, attr) {
           $toggle.toggleClass('checked', attr)
-            .find(':first-child').text(textToggle[!attr-0]);
+            .find(':first-child').text(settings.stateText[!attr-0]);
           return !attr;
         });
       });
@@ -43,7 +41,7 @@
           if(attr == 'checked') attr = true;
           $toggle.attr('for', $checkbox.attr('id'))
             .toggleClass('checked', attr)
-              .find(':first-child').text(textToggle[attr-0]);
+              .find(':first-child').text(settings.stateText[attr-0]);
           return attr;
         })
         .after($toggle);

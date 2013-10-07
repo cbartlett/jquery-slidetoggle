@@ -6,9 +6,8 @@ Unobtrusive jQuery plugin that converts checkboxes to slide toggles.
 
 ### Options/Defaults:
     {
-        className:     'slidetoggle',
-        checkedText:   'yes',
-        uncheckedText: 'no'
+        className: 'slidetoggle',
+        stateText: ['no', 'yes']
     }
 
 ### Notes:
