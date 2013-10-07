@@ -1,5 +1,5 @@
 div.slidetoggle {
-background-color: gray;
+background-color: red;
 border-radius: 3px;
 display: inline-block;
 position: relative;
@@ -11,6 +11,9 @@ height: 24px;
 -moz-user-select: none;
 -ms-user-select: none;
 user-select: none;
+}
+div.slidetoggle.checked {
+background-color: green;
 }
 div.slidetoggle .slidetoggle-text {
 color: #fff;
@@ -27,30 +30,30 @@ float: left;
 margin: 0 0 0 5px;
 }
 div.slidetoggle .slidetoggle-slider {
-background-color: lightgray;
+background-color: white;
 border-radius: 2px;
 position: absolute;
-left: 1px\9;
-top: 1px;
-width: 22px;
-height: 22px;
-transform: translate(1px, 0);
+left: 2px\9;
+top: 2px;
+width: 20px;
+height: 20px;
+transform: translate(2px, 0);
 transition: transform .1s;
--moz-transform: translate(1px, 0);
+-moz-transform: translate(2px, 0);
 -moz-transition: -moz-transform .1s;
--ms-transform: translate(1px, 0);
+-ms-transform: translate(2px, 0);
 -ms-transition: -ms-transform .1s;
--o-transform: translate(1px, 0);
+-o-transform: translate(2px, 0);
 -o-transition: -o-transform .1s;
--webkit-transform: translate(1px, 0);
+-webkit-transform: translate(2px, 0);
 -webkit-transition: -webkit-transform .1s;
 }
 div.slidetoggle.checked .slidetoggle-slider {
-left: 37px\9;
-transform: translate(37px, 0);
--moz-transform: translate(37px, 0);
--ms-transform: translate(37px, 0);
--o-transform: translate(37px, 0);
--webkit-transform: translate(37px, 0);
+left: 38px\9;
+transform: translate(38px, 0);
+-moz-transform: translate(38px, 0);
+-ms-transform: translate(38px, 0);
+-o-transform: translate(38px, 0);
+-webkit-transform: translate(38px, 0);
 }
 

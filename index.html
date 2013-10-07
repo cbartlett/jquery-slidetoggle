@@ -1,16 +1,25 @@
+<!DOCTYPE html>
 <html>
   <head>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="jquery.slidetoggle.js"></script>
     <link rel="stylesheet" type="text/css" href="jquery.slidetoggle.css" />
+    <style type="text/css">
+      label {
+        display: inline-block;
+        font-family: sans-serif;
+        line-height: 24px;
+        margin-right: 10px;
+        vertical-align: top;
+      }
+    </style>
   </head>
   <body>
-    <input class="slidetoggle" type="checkbox" />
-    <input class="slidetoggle" type="checkbox" checked />
-    <input class="slidetoggle" type="checkbox" />
+    <label for="helpful">Do you find this plugin helpful?</label>
+    <input id="helpful" type="checkbox" checked />
     <script>
       $(function() {
-        $('input.slidetoggle').slidetoggle();
+        $('input:checkbox').slidetoggle();
       });
     </script>
   </body>
