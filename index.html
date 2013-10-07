@@ -12,11 +12,17 @@
         margin-right: 10px;
         vertical-align: top;
       }
+      div.slidetoggle {
+        float: right;
+      }
     </style>
   </head>
   <body>
-    <label for="helpful">Do you find this plugin helpful?</label>
+    <label for="helpful">Did you find this plugin helpful?</label>
     <input id="helpful" type="checkbox" checked />
+    <hr />
+    <label for="buggy">Did you find this plugin buggy?</label>
+    <input id="buggy" type="checkbox" />
     <script>
       $(function() {
         $('input:checkbox').slidetoggle();

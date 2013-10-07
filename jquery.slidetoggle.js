@@ -3,6 +3,7 @@
     options = options || {};
 
     var className = options.className || 'slidetoggle'
+      , eventName = className + ':click'
       , checkedText = options.checkedText || 'yes'
       , uncheckedText = options.uncheckedText || 'no'
       , $toggleTemplate = $('<div><div></div><div></div></div>').addClass(className);
@@ -11,12 +12,16 @@
       return checked ? checkedText : uncheckedText
     }
 
-    $(document).on('click', 'div.' + className, function() {
-      var $toggle = $(this);
+    $(document).off(eventName).on(eventName, function(e) {
+      var $toggle = $(e.target);
       $toggle.prev().attr('checked', function(i, attr) {
         $toggle.toggleClass('checked', attr).find(':first-child').text(toggleText(!attr));
         return !attr;
       });
+    });
+
+    $(document).on('click', 'div.' + className, function() {
+      $(this).trigger(eventName);
     });
 
     $(document).on('click', 'label', function() {
