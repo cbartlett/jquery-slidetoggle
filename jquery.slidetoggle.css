@@ -16,7 +16,7 @@ div.slidetoggle.checked {
 background-color: green;
 }
 div.slidetoggle div:first-child {
-color: #fff;
+color: white;
 cursor: default;
 float: right;
 font-size: 12px;
