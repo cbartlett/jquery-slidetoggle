@@ -1,6 +1,5 @@
 (function($) {
   $.fn.slidetoggle = function(options) {
-
     var settings = $.extend({
         className: 'slidetoggle',
         stateText: ['no', 'yes']
@@ -10,7 +9,6 @@
           settings.className + '"><div></div><div></div></div>');
 
     if(!$.fn.slidetoggle.init) {
-
       $(document).on(eventName, function(e) {
         var $toggle = $(e.target);
         $toggle.prev().attr('checked', function(i, attr) {
